@@ -51,3 +51,13 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* footer  */
+.footer-right ul li{
+    display: inline-block;
+    color: #fff;
+}
+.footer-right ul li a {
+    margin-left: 20px;
+    cursor: pointer;
+}
