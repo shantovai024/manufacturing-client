@@ -3,9 +3,51 @@
     font-size: 50px;
     margin-bottom: 10px;
 }
+
 .business-icon-statistics h5 {
     font-size: 22px;
 }
-.business-icon-title h4{
+
+.business-icon-title h4 {
     font-size: 20px;
+}
+
+/* testimonial-area  */
+
+.testimonial-wrapper {
+    position: relative;
+}
+
+.testimonial-wrapper .react-multi-carousel-list {
+    position: unset !important;
+}
+
+.testimonial-wrapper .commonArrow {
+    position: absolute;
+    z-index: 112;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    background: green;
+    color: #fff;
+    line-height: 16px;
+    text-align: center;
+    transition: .3s;
+    border: none;
+}
+
+.testimonial-wrapper .commonArrow:hover {
+    color: #101621;
+}
+
+.testimonial-wrapper .arrowRight {
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-wrapper .arrowLeft {
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
 }

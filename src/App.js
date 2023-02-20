@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import "react-multi-carousel/lib/styles.css";
 import '@fortawesome/fontawesome-free/css/all.css'
 import './assets/style.css'
 import Navbar from './Components/Navbar';
