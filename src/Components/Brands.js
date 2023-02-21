@@ -8,7 +8,7 @@ import image5 from '../assets/images/brands/sp.png'
 
 const Brands = () => {
     return (
-        <div className='brands-area mgt-12'>
+        <div className='brands-area mx-auto mt-16'>
             <div className="brands-carousel-wrapper">
                 <Carousel className="testimonial"
                     infinite={true}
