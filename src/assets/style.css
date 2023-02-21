@@ -53,6 +53,10 @@
 }
 
 /* footer  */
+.footer-top-left ul li{
+    margin-bottom: 15px;
+    font-size: 16px;
+}
 .footer-right ul li{
     display: inline-block;
     color: #fff;
