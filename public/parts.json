@@ -1,0 +1,32 @@
+[
+  {
+    "_id": 1,
+    "name": "Cycle Tyre",
+    "supplierName": "Duranta",
+    "description": "rubber covering that fits around the rim of a bicycle wheel to provide traction, cushioning, and protection against punctures. It typically consists of a rubber tread that contacts the ground.",
+    "minOrder": 500,
+    "price": 300,
+    "quantity": 20000,
+    "img": "https://i.ibb.co/p43Y0f3/3.png"
+  },
+  {
+    "_id": 2,
+    "name": "Cycle Seat",
+    "supplierName": "Veloce",
+    "description": "A cycle seat is designed to provide support and comfort to the rider during long rides. It can be made from a variety of materials such as leather, synthetic materials, or gel padding.",
+    "minOrder": 300,
+    "price": 200,
+    "quantity": 40000,
+    "img": "https://i.ibb.co/Z1kKz5b/2.png"
+  },
+  {
+    "_id": 3,
+    "name": "Cycle Gear",
+    "supplierName": "Phoenix ",
+    "description": "Cycle gear refers to the equipment and accessories worn or used by a cyclist for safety, comfort, and performance. This can include clothing, helmets, shoes, gloves, eyewear, lights, locks, pumps, and tools.",
+    "minOrder": 400,
+    "price": 800,
+    "quantity": 10000,
+    "img": "https://i.ibb.co/7YLqJR6/1.png"
+  }
+]
