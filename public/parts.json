@@ -23,7 +23,7 @@
     "_id": 3,
     "name": "Cycle Gear",
     "supplierName": "Phoenix ",
-    "description": "Cycle gear refers to the equipment and accessories worn or used by a cyclist for safety, comfort, and performance. This can include clothing, helmets, shoes, gloves, eyewear, lights, locks, pumps, and tools.",
+    "description": "Cycle gear refers to the equipment and accessories worn or used by a cyclist for safety, comfort, and performance. This can include clothing, helmets, shoes, gloves, eyewear,locks, pumps, and tools.",
     "minOrder": 400,
     "price": 800,
     "quantity": 10000,
