@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 import Loading from './Loading';
+import SocialLogin from './SocialLogin';
 
 const SignUp = () => {
 
@@ -68,6 +69,7 @@ const SignUp = () => {
                     <div className="register-option">
                         <p className='text-center'>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'><strong className='text-green-500 register'>Login</strong></span> Now</p>
                     </div>
+                    <SocialLogin/>
                 </div>
             </div>
         </>
