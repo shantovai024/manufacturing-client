@@ -13,6 +13,7 @@ import ResetPassword from './Components/ResetPassword';
 import SignUp from './Components/SignUp';
 import Blogs from './Components/Blogs';
 import Loading from './Components/Loading';
+import Portfolio from './Components/Portfolio';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/signup' element={<SignUp />}> </Route>
         <Route path='/resetpassword' element={<ResetPassword />}> </Route>
         <Route path='/blogs' element={<Blogs/>}> </Route>
+        <Route path='/portfolio' element={<Portfolio/>}> </Route>
         <Route path='/loading' element={<Loading />}> </Route>
         <Route path='*' element={<Error404 />}> </Route>
       </Routes>

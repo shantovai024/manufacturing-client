@@ -13,7 +13,7 @@ const Navbar = () => {
     const menuItems =
         <>
             <li><NavLink to='/'>HOME</NavLink></li>
-            <li><NavLink to='/protfolio'>PROTFOLIO</NavLink></li>
+            <li><NavLink to='/portfolio'>PROTFOLIO</NavLink></li>
             <li><NavLink to='/blogs'>BLOGS</NavLink></li>
             <li>{user && (<NavLink to='/dashboard'>DASHBOARD</NavLink>)}</li>
             <li> {user ? (<NavLink to='/login' onClick={() => signOut(auth)}> <span className='bg-slate-100 p-1 text-black'>{user.displayName}</span> LOGOUT</NavLink>) : (<NavLink to='/login'>LOGIN</NavLink>) } </li>

@@ -146,3 +146,13 @@
     font-size: 18px;
     text-align: justify;
 }
+
+/* portfolio-wrap */
+.portfolio-wrap span {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.portfolio-wrap p a{
+    margin-right: 10px;
+}
