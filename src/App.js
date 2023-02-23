@@ -11,6 +11,7 @@ import Purchase from './Components/Purchase';
 import Login from './Components/Login';
 import ResetPassword from './Components/ResetPassword';
 import SignUp from './Components/SignUp';
+import Blogs from './Components/Blogs';
 import Loading from './Components/Loading';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path='/login' element={<Login />}> </Route>
         <Route path='/signup' element={<SignUp />}> </Route>
         <Route path='/resetpassword' element={<ResetPassword />}> </Route>
+        <Route path='/blogs' element={<Blogs/>}> </Route>
         <Route path='/loading' element={<Loading />}> </Route>
         <Route path='*' element={<Error404 />}> </Route>
       </Routes>
