@@ -125,3 +125,10 @@
 .logo-icon img {
     display: inline-block;
 }
+
+/* not found  */
+.not-found img{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
