@@ -14,19 +14,36 @@ import SignUp from './Components/SignUp';
 import Blogs from './Components/Blogs';
 import Loading from './Components/Loading';
 import Portfolio from './Components/Portfolio';
+import PrivateRoute from './Components/PrivateRoute';
+import Dashboard from './Components/Dashboard';
+import AddAReviews from './Components/AddAReviews';
+import MyOrders from './Components/MyOrders';
+import MyProfile from './Components/MyProfile';
 
 function App() {
   return (
     <div className='container mx-auto'>
       <Navbar />
       <Routes>
+
+        <Route element={<PrivateRoute />}>
+          <Route path='/portfolio' element={<Portfolio />}> </Route>
+          <Route path='/dashboard' element={<Dashboard />}>
+            <Route path='add-review' element={<AddAReviews />}></Route>
+            <Route path='my-orders' element={<MyOrders />}></Route>
+            <Route path='my-profile' element={<MyProfile />}></Route>
+          </Route>
+        </Route>
+
+
         <Route path='/' element={<Home />}> </Route>
         <Route path='/purchase' element={<Purchase />}> </Route>
         <Route path='/login' element={<Login />}> </Route>
         <Route path='/signup' element={<SignUp />}> </Route>
         <Route path='/resetpassword' element={<ResetPassword />}> </Route>
-        <Route path='/blogs' element={<Blogs/>}> </Route>
-        <Route path='/portfolio' element={<Portfolio/>}> </Route>
+        <Route path='/blogs' element={<Blogs />}> </Route>
+        {/* <Route path='/portfolio' element={<Portfolio />}> </Route> */}
+        <Route path='/dashboard' element={<Dashboard />}> </Route>
         <Route path='/loading' element={<Loading />}> </Route>
         <Route path='*' element={<Error404 />}> </Route>
       </Routes>

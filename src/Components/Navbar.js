@@ -7,7 +7,7 @@ import auth from '../firebase.init';
 const Navbar = () => {
 
     const [user] = useAuthState(auth)
-    console.log(user);
+    // console.log(user);
     // console.log(user.displayName);
 
     const menuItems =

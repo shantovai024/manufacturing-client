@@ -1,8 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Part = (props) => {
-    let {name, supplierName, description, minOrder, price, quantity, img} = props.part
+    let {name, _id, supplierName, description, minOrder, price, quantity, img} = props.part;
+
+    let navigate= useNavigate()
+
+    let navigateToPurchase = id => {
+        // navigate(`/purchase/${id}`)
+        navigate(`/purchase/`)
+    }
+
     return (
         <>
            <div className="single-part bordered">
@@ -13,7 +21,7 @@ const Part = (props) => {
             <h3 className='text-xl mb-4'>Min Order: {minOrder}</h3>
             <h4 className='text-xl mb-4'>Price: {price}</h4>
             <h3 className='text-xl'>Quantity: {quantity}</h3>
-            <Link to='/purchase' className='btn btn-accent mt-4'>Buy Now</Link>
+            <button onClick={() => navigateToPurchase(_id)} className='btn btn-accent mt-4'>Buy Now</button>
            </div>
         </>
     );

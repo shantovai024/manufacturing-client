@@ -156,3 +156,9 @@
 .portfolio-wrap p a{
     margin-right: 10px;
 }
+
+/* nested-dashboard */
+.nested-dashboard ul li a.active{
+background-color: #fff;
+color: #000;
+}
