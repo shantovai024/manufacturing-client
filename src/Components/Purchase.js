@@ -40,7 +40,7 @@ const Purchase = () => {
 
   return (
     <>
-      <div className="purchase-form mx-auto w-1/2 mt-16 mb-16">
+      <div className="purchase-form mx-auto w-full p-5 lg:p-0 lg:w-1/2 mt-16 mb-16">
         <div className="purchase-info">
           <img className='mb-4' src={img} alt="" />
           <p className='text-2xl mb-2'><b>Name: </b>{name}</p>
