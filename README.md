@@ -11,3 +11,20 @@ About Website:
 * User can login with Email, Password and Google account.
 * Reset Password System for Password Recovery.
 * TailWind Css with DaisyUi Component Library.
+
+Used Popular node Packages
+* React Router Dom
+* Font Awesome
+* Firebase
+* React-Firebase-Hooks
+* React Helmet
+* React Loader Spinner
+* React Multi Carousel
+* React Reveal
+* React Router Hash Link
+* React Toastify
+
+Feature
+* Top to Scroll
+* Sticky Navbar
+* Preloader
