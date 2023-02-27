@@ -1,61 +1,71 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
 const Purchase = () => {
-    let { id } = useParams();
-    let [parts, setParts] = useState({})
 
-    const [user, loading] = useAuthState(auth);
+  let handlePurchase = (event) => {
+    event.preventDefault()
+    toast.success("Thanks for Purchase")
+  }
 
- /*    let {name,  supplierName, description, minOrder, price, quantity, img} = parts;
+  let { id } = useParams();
+  let [part, setPart] = useState({})
 
-    useEffect(() => {
-        let url = `https://manufacturing-server-phi.vercel.app/allproducts/${id}`
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => setParts(data))
-    }) */
+  const [errorMessage, setErrorMessage] = useState("");
 
-    const [inputValue, setInputValue] = useState("");
-    const [errorMessage, setErrorMessage] = useState("");
-    
+  const [user] = useAuthState(auth);
+  let { name, supplierName, description, minOrder, price, quantity, img } = part;
 
-    let handleInputChange = event => {
-        const value = event.target.value;
-    
-        if (value < 10) {
-          setErrorMessage("Please order minimum Quantity");
-        } else if (value > 20) {
-          setErrorMessage("Out of Quantity!");
-        } else {
-          setErrorMessage("");
-        }
-    
-        setInputValue(value);
-      }
+  useEffect(() => {
+    let url = `https://manufacturing-server-ten.vercel.app/purchase/${id}`
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setPart(data))
+  })
 
-      const isInputValid = inputValue >= 10 && inputValue <= 20;
+  let handleInputChange = event => {
 
-    return (
-        <div>
-            <h2>This is Purchase PAge</h2>
-            {/* <h2>{name}</h2> */}
-            <div className="purchase-form mx-auto w-1/2 mt-16 mb-16">
-                <form>
-                    <input className='input input-bordered w-full  mb-4' type="text" value={user.displayName} disabled /> <br />
-                    <input className='input input-bordered w-full  mb-4' type="email" value={user.email} disabled /> <br />
-                    <input className='input input-bordered w-full  mb-4' type="number" value={inputValue} onChange={handleInputChange} /> <br />
-                    <p className='text-red-400 mb-2'>{errorMessage}</p>
-                    <input className='input input-bordered w-full  mb-4' type="text" placeholder='Enter Your Address' /> <br />
-                    <input className='input input-bordered w-full  mb-4' type="number" placeholder='Enter Your Number' /> <br />
-                    <textarea className='textarea textarea-accent w-full mb-4' name="" id=""  placeholder='Enter Your Message'></textarea>
-                    <button className='btn btn-accent btn-lg' disabled={!isInputValid}>Send</button>
-                </form>
-            </div>
+    let partsQuantity = event.target.value
+    if (minOrder > partsQuantity) {
+      setErrorMessage("Please order minimum Quantity");
+    } else if (partsQuantity > quantity) {
+      setErrorMessage("Out of Quantity!");
+    } else {
+      setErrorMessage("");
+    }
+  }
+
+  return (
+    <>
+      <div className="purchase-form mx-auto w-1/2 mt-16 mb-16">
+        <div className="purchase-info">
+          <img className='mb-4' src={img} alt="" />
+          <p className='text-2xl mb-2'><b>Name: </b>{name}</p>
+          <p className='text-2xl mb-2'><b>Brand: </b>{supplierName}</p>
+          <p className='text-xl mb-4'><b>Des: </b>{description}</p>
+          <p className='text-xl mb-2'><b>Min Order: </b>{minOrder}</p>
+          <p className='text-xl mb-2'><b>Quantity: </b>{quantity}</p>
+          <p className='text-xl mb-6'><b>Price: </b>{price}</p>
+
         </div>
-    );
+        <form onSubmit={handlePurchase}>
+          <input required className='input input-bordered w-full mb-4' type="text" value={user?.displayName} disabled /> <br />
+          <input required className='input input-bordered w-full mb-4' type="email" value={user?.email} disabled /> <br />
+
+          <input required className='input input-bordered w-full mb-4' name='partsQuantity' type="number" onChange={handleInputChange} defaultValue={minOrder} /> <br />
+
+          <p className='text-red-400 mb-2'>{errorMessage}</p>
+          <input required className='input input-bordered w-full mb-4' type="text" placeholder='Enter Your Address' /> <br />
+          <input required className='input input-bordered w-full mb-4' type="number" placeholder='Enter Your Phone Number' /> <br />
+          <textarea required className='textarea textarea-accent w-full mb-4' name="" id="" placeholder='Enter Your Message'></textarea>
+          <button className='btn btn-accent btn-lg'>Send</button>
+        </form>
+      </div>
+    </>
+  );
 };
 
 export default Purchase;

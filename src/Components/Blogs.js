@@ -3,7 +3,7 @@ import React from 'react';
 const Blogs = () => {
     return (
         <>
-            <div className="blog-area py-12 grid grid-cols-3 gap-5">
+            <div className="blog-area py-12 grid grid-cols-1 md:grid-cols-3 gap-5">
                 <div className="single-blog">
                     <h3 className="text-3xl"> How will you improve the performance of a React Application?</h3>
                     <p>There are several ways to improve the performance of a React application. Optimize render methods is of the most common reasons for poor performance in a React application is due to excessive rendering of components. React.lazy and Suspense allow us to split our code into smaller chunks, which can improve the initial loading time of our application. State management libraries like Redux can help to manage the state of your application more efficiently, which can improve performance.</p>

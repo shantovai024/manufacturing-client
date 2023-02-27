@@ -8,7 +8,7 @@ import image5 from '../assets/images/brands/sp.png'
 
 const Brands = () => {
     return (
-        <div className='brands-area mx-auto mt-16'>
+        <div className='brands-area mx-auto mt-8 lg:mt-16'>
             <div className="brands-carousel-wrapper">
                 <Carousel className="testimonial"
                     infinite={true}
@@ -39,28 +39,30 @@ const Brands = () => {
                                 max: 576,
                                 min: 1
                             },
-                            items: 1,
+                            items: 2,
                         }
                     }}>
-                        <div className="single-brand">
-                            <img src={image1} alt="" />
-                        </div>
-                        <div className="single-brand">
-                            <img src={image2} alt="" />
-                        </div>
-                        <div className="single-brand">
-                            <img src={image3} alt="" />
-                        </div>
-                        <div className="single-brand">
-                            <img src={image4} alt="" />
-                        </div>
-                        <div className="single-brand">
-                            <img src={image5} alt="" />
-                        </div>
-                        <div className="single-brand">
-                            <img src={image2} alt="" />
-                        </div>
+
+                    <div className="single-brand">
+                        <img src={image1} alt="" />
+                    </div>
+                    <div className="single-brand">
+                        <img src={image2} alt="" />
+                    </div>
+                    <div className="single-brand">
+                        <img src={image3} alt="" />
+                    </div>
+                    <div className="single-brand">
+                        <img src={image4} alt="" />
+                    </div>
+                    <div className="single-brand">
+                        <img src={image5} alt="" />
+                    </div>
+                    <div className="single-brand">
+                        <img src={image2} alt="" />
+                    </div>
                 </Carousel>
+
             </div>
         </div>
     );

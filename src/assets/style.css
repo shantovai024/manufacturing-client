@@ -1,4 +1,14 @@
-/* business area  */
+/* ---------------- Navbar ---------------- */
+
+.position-sticky{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 5555;
+}
+
+/* ---------------- business area ---------------- */
+
 .business-icon i {
     font-size: 50px;
     margin-bottom: 10px;
@@ -12,7 +22,7 @@
     font-size: 20px;
 }
 
-/* testimonial-area  */
+/* ---------------- testimonial-area ---------------- */
 
 .testimonial-wrapper {
     position: relative;
@@ -52,7 +62,8 @@
     transform: translateX(-50%);
 }
 
-/* footer  */
+/* ---------------- footer Area ---------------- */
+
 .footer-top-left ul li {
     margin-bottom: 15px;
     font-size: 18px;
@@ -68,16 +79,15 @@
     cursor: pointer;
 }
 
-/* brands  */
-
-/* login  */
+/* ---------------- login ---------------- */
 
 .register,
 .reset {
     cursor: pointer;
 }
 
-/* Loading  */
+/* ---------------- Loading ---------------- */
+
 .load-parent {
     height: 50vh;
     text-align: center;
@@ -94,7 +104,8 @@
 }
 
 
-/* Google btn  */
+/* ---------------- Google btn ---------------- */
+
 .google-btn-bg {
     background-color: #fff;
     border: 1px solid #229F44;
@@ -126,39 +137,111 @@
     display: inline-block;
 }
 
-/* not found  */
-.not-found img{
+/* ---------------- not found ---------------- */
+
+.not-found img {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* single-blog  */
+/* ---------------- single-blog ---------------- */
+
 .single-blog {
     margin-bottom: 20px;
 }
 
-.single-blog h3{
+.single-blog h3 {
     margin-bottom: 15px;
 }
 
-.single-blog p{
+.single-blog p {
     font-size: 18px;
     text-align: justify;
 }
 
-/* portfolio-wrap */
+/* ---------------- portfolio-wrap ---------------- */
+
 .portfolio-wrap span {
     font-size: 20px;
     font-weight: bold;
     margin-right: 15px;
 }
-.portfolio-wrap p a{
+
+.portfolio-wrap p a {
     margin-right: 10px;
 }
 
-/* nested-dashboard */
-.nested-dashboard ul li a.active{
-background-color: #fff;
-color: #000;
+/* ---------------- nested-dashboard ---------------- */
+
+.nested-dashboard ul li a.active {
+    background-color: #fff;
+    color: #000;
+}
+
+/* ---------------- table ---------------- */
+
+table th {
+    background: #ddd;
+    padding: 10px 15px;
+    border-right: 1px solid #000;
+}
+
+/* ---------------- Scroll Up ---------------- */
+
+.customScrollUp {
+    text-align: center;
+    bottom: 30px;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    z-index: 999;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px 5px 0 0px;
+    border: none;
+    background-color: #f4f5ff;
+    box-shadow: 0px 0px 2px rgb(0 0 0 / 40%);
+    transition: .5s;
+}
+
+.customScrollUp i {
+    font-size: 20px;
+    color: #333;
+    line-height: 10px;
+    position: relative;
+}
+
+.customScrollUp:hover {
+    background-color: #d7d9ef;
+}
+
+/* ---------------- Preloader ---------------- */
+
+.pre-loader {
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* ---------------- Responsive CSS ---------------- */
+
+/* Max Resulation 576px  */
+@media (max-width: 576px) {
+
+    .contact-right iframe {
+        height: 500px;
+        width: 100%;
+    }
+
+    .footer-left {
+        margin-bottom: 10px;
+    }
+
+    .copyright {
+        margin-bottom: 15px;
+    }
+
 }

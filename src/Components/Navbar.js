@@ -1,27 +1,28 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink } from 'react-router-dom';
 import auth from '../firebase.init';
+import logo from '../assets/images/others/logo.png'
+import { HashLink as Link } from 'react-router-hash-link';
+import { NavHashLink as NavLink } from 'react-router-hash-link';
+
 
 const Navbar = () => {
 
     const [user] = useAuthState(auth)
-    // console.log(user);
-    // console.log(user.displayName);
 
     const menuItems =
         <>
-            <li><NavLink to='/'>HOME</NavLink></li>
-            <li><NavLink to='/portfolio'>PROTFOLIO</NavLink></li>
-            <li><NavLink to='/blogs'>BLOGS</NavLink></li>
-            <li>{user && (<NavLink to='/dashboard'>DASHBOARD</NavLink>)}</li>
-            <li> {user ? (<NavLink to='/login' onClick={() => signOut(auth)}> <span className='bg-slate-100 p-1 text-black'>{user.displayName}</span> LOGOUT</NavLink>) : (<NavLink to='/login'>LOGIN</NavLink>) } </li>
+            <li><NavLink to='/#'>HOME</NavLink></li>
+            <li><NavLink to='/portfolio#'>PROTFOLIO</NavLink></li>
+            <li><NavLink to='/blogs#'>BLOGS</NavLink></li>
+            <li>{user && (<NavLink to='/dashboard#'>DASHBOARD</NavLink>)}</li>
+            <li> {user ? (<NavLink to='/login#' onClick={() => signOut(auth)}> <span className='bg-slate-100 p-1 text-black'>{user.displayName}</span> LOGOUT</NavLink>) : (<NavLink to='/login#'>LOGIN</NavLink>)} </li>
         </>
 
     return (
         <>
-            <div className="navbar bg-base-100 ">
+            <div className="navbar bg-base-100 position-sticky">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -31,7 +32,7 @@ const Navbar = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to='/' className="btn btn-ghost normal-case text-xl">Cycle Guru</Link>
+                    <Link to='/#' className="btn btn-ghost normal-case text-xl"><img src={logo} alt="" /></Link>
                 </div>
                 <div className="navbar-end hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

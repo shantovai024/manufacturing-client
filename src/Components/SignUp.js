@@ -21,7 +21,7 @@ const SignUp = () => {
 
     let errorMessage;
     if (error) {
-        errorMessage = <p className='text-danger text-center'>{error?.message}</p>
+        errorMessage = <p className='text-red-500 text-center'>{error?.message}</p>
     }
 
     let from = location.state?.from?.pathname || "/login";
@@ -35,7 +35,6 @@ const SignUp = () => {
     if (loading) {
         return <Loading></Loading>
     }
-
 
     let signUpToLogin = event => {
         navigate('/login')
@@ -57,7 +56,7 @@ const SignUp = () => {
         <>
             <div className="login-area py-16 ">
                 <h2 className='text-4xl text-center mb-8'>Sign Up</h2>
-                <div className="login-wrap w-1/2 mx-auto">
+                <div className="login-wrap p-4 md:p-0 w-full md:w-1/2 mx-auto">
                     <form onSubmit={handleSignup}>
                         <input name='name' className='input input-bordered w-full  mb-4' type="text" placeholder='Enter Your Name' /> <br />
                         <input name='number' className='input input-bordered w-full  mb-4' type="number" placeholder='Enter Phone Number' /> <br />
@@ -69,7 +68,7 @@ const SignUp = () => {
                     <div className="register-option">
                         <p className='text-center'>Already have an account? <span onClick={signUpToLogin} className='sign-up-route text-primary'><strong className='text-green-500 register'>Login</strong></span> Now</p>
                     </div>
-                    <SocialLogin/>
+                    <SocialLogin />
                 </div>
             </div>
         </>

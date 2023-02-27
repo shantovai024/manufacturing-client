@@ -5,12 +5,12 @@ import auth from "../firebase.init";
 import Loading from "./Loading";
 
 const PrivateRoute = () => {
-  const location = useLocation();
 
+  const location = useLocation();
   const [user, loading] = useAuthState(auth);
 
-  if (loading){
-    return <Loading/>
+  if (loading) {
+    return <Loading />
   }
 
   if (!user) {

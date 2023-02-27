@@ -1,18 +1,41 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
+import auth from '../firebase.init';
 
 const AddAReviews = () => {
+    const [user] = useAuthState(auth)
+
+    let handleReview = event => {
+        event.preventDefault();
+        event.target.reset()
+        toast.success("Review Successfully")
+    }
+
     return (
         <>
-            <h2>my</h2>
-            <p> As an AI language model, I can produce a 500 words paragraph on a variety of topics. If you have a specific topic in mind, please let me know and I will be happy to oblige. In the absence of a specific topic, I will produce a paragraph on the importance of education.
+            <div className="add-review mx-auto w-1/2 mt-8">
+                <h2 className='text-center text-3xl mb-8'>My Review</h2>
+                <p className='text-xl'><b>Name:</b> {user.displayName}</p>
+                <p className='text-xl'><b>Email:</b> {user.email}</p>
+                <h3 className='text-xl mb-2 mt-4'>Rate Our Product: </h3>
+                
+                <div class="rating  block" required>
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value="1" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value="2" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value="3" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value="4" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value="5" />
+                </div>
 
-                Education is essential for personal growth and societal progress. It is the foundation of a successful life and opens doors to countless opportunities. Education empowers individuals to achieve their dreams and aspirations, and equips them with the necessary skills to make a positive impact in the world. It is a lifelong journey of learning and development, and an investment in one's future.
+                <h3 className='text-xl mt-4'>Comment On Us:</h3>
 
-                Education enables individuals to acquire knowledge, skills, and values that are essential for personal and professional success. It provides a framework for critical thinking and problem-solving, and cultivates creativity and innovation. Education also promotes social and emotional development, and fosters empathy, understanding, and respect for diversity. It helps individuals to become well-rounded and informed citizens, and to contribute meaningfully to their communities and society.
+                <form onSubmit={handleReview}>
+                    <textarea className='bg-slate-100 text-black mt-4 mb-2 p-4 rounded' name="text" id="" cols="30" rows="10" placeholder='Write Your Comment'></textarea> <br />
+                    <button type='submit' className='btn btn-accent'>Send</button>
+                </form>
+            </div>
 
-                Education is also a driver of societal progress. It is essential for economic growth and prosperity, and plays a critical role in reducing poverty and inequality. Education enables individuals to access better job opportunities, higher wages, and improved working conditions. It also provides a pathway for upward social mobility, and helps to create a more equitable and just society. Moreover, education promotes democracy, human rights, and social justice, and empowers individuals to participate in civic life and advocate for positive change.
-
-                However, despite its importance, access to education remains a challenge for many individuals and communities around the world. Poverty, discrimination, and conflict are just some of the barriers that prevent millions of children and adults from accessing quality education. This highlights the need for concerted efforts to ensure that education is accessible and affordable for all, regardless of their background or circumstances. </p>
         </>
     );
 };

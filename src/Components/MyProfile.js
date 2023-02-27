@@ -11,9 +11,10 @@ const MyProfile = () => {
                 <p className='text-2xl'><b>Name:</b> {user?.displayName}</p>
                 <p className='text-2xl'><b>Email:</b> {user?.email}</p>
                 <p className='text-2xl'><b>Phone:</b> {user?.phone || "n/a"}</p>
+                <p className='text-2xl'><b>Education:</b> {user?.education || "n/a"}</p>
                 <p className='text-2xl'><b>Location:</b> {user?.loaction || "n/a"}</p>
                 <p className='text-2xl'><b>Linkedin:</b> {user?.linkedin || "n/a"}</p>
-                
+
             </div>
         </>
     );

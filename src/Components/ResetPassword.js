@@ -16,16 +16,13 @@ const ResetPassword = () => {
     if (sending) {
         return <Loading></Loading>;
     }
-    
-    let errorMessage;
 
+    let errorMessage;
     if (error) {
         errorMessage = (
-            <p className="text-danger text-center">{error?.message}</p>
+            <p className="text-red-500 text-center">{error?.message}</p>
         );
     }
-
-
 
     const handleResetPassword = async () => {
         const email = emailRef.current.value;
@@ -40,7 +37,7 @@ const ResetPassword = () => {
         <>
             <div className="reset-area py-16">
                 <h2 className='text-4xl text-center'>Reset Your <span className='text-red-500'>Password!</span></h2>
-                <form className='w-1/2 mx-auto mt-8'>
+                <form className='p-4 md:p-0 w-full md:w-1/2 mx-auto mt-8'>
                     <input name='email' className='input input-bordered w-full  mb-4' type="email" ref={emailRef} placeholder='Enter Your Email' />
                     <button type='submit' onClick={handleResetPassword} className='btn btn-accent btn-md w-full mx-auto block mt-4'>Reset Now</button>
                 </form>

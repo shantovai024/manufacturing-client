@@ -14,7 +14,7 @@ const Reviews = () => {
 
     return (
         <>
-            <div className="reviews-area px-16 py-16 ">
+            <div className="reviews-area p-6 lg:p-16 ">
                 <div className="w-3/4 mx-auto">
                     <h2 className='text-center text-4xl mb-16'>Check What’s Our Client Say <span className='text-green-500'>About Us</span></h2>
 
@@ -51,6 +51,7 @@ const Reviews = () => {
                                     items: 1,
                                 }
                             }}>
+
                             <div className="testimonial-item">
                                 <div className="testimonial-icon text-center text-5xl">
                                     <i class="fa-solid fa-quote-left"></i>
@@ -63,6 +64,7 @@ const Reviews = () => {
                                     <p className="designation text-xl mb-4">Cyclist</p>
                                 </div>
                             </div>
+
                             <div className="testimonial-item">
                                 <div className="testimonial-icon text-center text-5xl">
                                     <i class="fa-solid fa-quote-left"></i>
@@ -75,8 +77,8 @@ const Reviews = () => {
                                     <p className="designation text-xl mb-4">Cyclist</p>
                                 </div>
                             </div>
-                            
                         </Carousel>
+
                     </div>
                 </div>
             </div>

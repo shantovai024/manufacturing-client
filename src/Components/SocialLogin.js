@@ -18,18 +18,18 @@ const SocialLogin = () => {
 
     let errorMessage;
     if (error) {
-        errorMessage = <p className="text-danger">{error?.message}</p>;
+        errorMessage = <p className="text-red-500">{error?.message}</p>;
     }
+
     return (
         <>
             <div className="social-login">
                 <h3 className='text-3xl mb-4 text-center mt-8'>Or Login with</h3>
                 {errorMessage}
                 <div className="google-auth-wrapper">
-                <button onClick={() => signInWithGoogle()} className="google-btn-bg w-full d-flex justify-content-center">
-                        <span className='logo-icon'> <img className='mr-3' src="https://img.icons8.com/color/48/000000/google-logo.png"  alt='' />Google </span>
-                        
-                    </button> 
+                    <button onClick={() => signInWithGoogle()} className="google-btn-bg w-full d-flex justify-content-center">
+                        <span className='logo-icon'> <img className='mr-3' src="https://img.icons8.com/color/48/000000/google-logo.png" alt='' />Google </span>
+                    </button>
                 </div>
             </div>
         </>
