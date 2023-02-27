@@ -11,4 +11,3 @@ About Website:
 * User can login with Email, Password and Google account.
 * Reset Password System for Password Recovery.
 * TailWind Css with DaisyUi Component Library.
-* Clean and Maintainable Code
